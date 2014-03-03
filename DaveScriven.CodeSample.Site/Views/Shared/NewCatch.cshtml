@@ -1,0 +1,20 @@
+﻿<form role="form">
+    <div class="form-group">
+        <label for="Species">Species</label>
+        <input type="text" data-val="true" data-val-required="A species must be specified." class="form-control" id="Species" name="Species" placeholder="e.g. flathead, snapper">
+        <span class="field-validation-valid" data-valmsg-for="Species" data-valmsg-replace="true"></span>
+    </div>
+    <div class="form-group">
+        <label for="Length">Length</label>
+        <input type="number" data-val="true" data-val-required="The length must be specified." data-val-number="The Length field must be a number." data-val-range-max="130" data-val-range-min="1" data-val-range="The Length field must be between 1 and 130." class="form-control" name="Length" id="Length">
+        <span class="field-validation-valid" data-valmsg-for="Length" data-valmsg-replace="true"></span>
+    </div>
+    <div class="form-group">
+        <label for="Depth">Depth</label>
+        <input type="number" data-val="true" data-val-required="The depth must be specified." data-val-number="The Depth field must be a number." data-val-range-max="130" data-val-range-min="1" data-val-range="The Depth field must be between 1 and 130." class="form-control" name="Depth" id="Depth">
+        <span class="field-validation-valid" data-valmsg-for="Depth" data-valmsg-replace="true"></span>
+    </div>
+    <input type="hidden" id="Latitude" name="Latitude" />
+    <input type="hidden" id="Longitude" name="Longitude" />
+    <img width="540" height="200" data-src-template="http://dev.virtualearth.net/REST/v1/Imagery/Map/Road/LATITUDE,LONGITUDE/13?mapSize=540,200&pushpin=LATITUDE,LONGITUDE;78&key=AuId-ysksHct80P8RnjD_bEDmGl6OvDvGUQvboU2I1ue0X7IOXOkvvA6tv1SWG0q" src="" />
+</form>

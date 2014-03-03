@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+<div class="page-header">
+    <h1>Record your fishing catches!</h1>
+    <p class="lead">Use the map below to view other catches or add your own.</p>
+</div>
+
+@section MidBody
+{
+    <div id="CatchMap" data-source="@Url.HttpRouteUrl("DefaultApi", new { controller = "catches" })" data-pin-icon="@Url.Content("~/content/images/PushPinIcon.png")"></div>
+    <div class="modal" id="CreateCatchForm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">New Catch</h4>
+                </div>
+                <div class="modal-body">
+                    @Html.Partial("NewCatch")
+                </div>
+                <div class="modal-footer">
+                    <a href="#" data-dismiss="modal" class="btn">Close</a>
+                    <a href="#" class="btn btn-primary" id="NewCatch">Save</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="CatchInfoBoxTemplate">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title" data-content="Species"></h3>
+            </div>
+            <div class="panel-body">
+                <span data-content="Length"></span>cm, caught in <span data-content="Depth"></span>m
+            </div>
+            <div class="panel-footer">
+                <button type="button" data-alt-text="Liked" data-url="@Url.HttpRouteUrl("CatchActionApi", new { action = "like", id = "TEMP" })" data-template-bind='[{"attribute": "data-id" , "value": "CatchId" }]' class="btn btn-primary">
+                    Like
+                </button>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="CatchesLoadFailedTemplate">
+        <div class="alert alert-danger"><p>Unable to load the catches, please refresh the page to try again.</p></div>
+    </script>
+}
+@section scripts
+{
+    @Scripts.Render("http://ecn.dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0")
+    @Scripts.Render("~/scripts/fishLog.DashboardController.js")
+}
+@section AfterBody
+{
+    <div class="row">
+        <div class="col-md-6">
+            <h2>What is this?</h2>
+            <p>
+                This is a small sample application created to demonstrate my ability to write good quality code and show understanding of ASP.NET MVC, REST APIs (implemented with Web API), front-end frameworks and design patterns.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h2>How do I use it?</h2>
+            <ul>
+                <li>Double click somewhere on the map to log a new catch.</li>
+                <li>Click on a catch icon to toggle its detail and 'Like' it.</li>
+            </ul>
+        </div>
+    </div>
+}
