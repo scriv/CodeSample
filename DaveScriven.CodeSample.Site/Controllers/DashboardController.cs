@@ -1,15 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using DaveScriven.CodeSample.Site.ReadModel;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace DaveScriven.CodeSample.Site.Controllers
 {
     public class DashboardController : Controller
     {
+        private readonly IFishLogReadModel readModel;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DashboardController"/> class.
+        /// </summary>
+        /// <param name="readModel">The read model.</param>
+        public DashboardController(IFishLogReadModel readModel)
+        {
+            this.readModel = readModel;
+        }
+
         public ActionResult Index()
         {
+            ViewBag.TotalCatches = this.readModel.Statistics.First().TotalCatches;
+
             return View();
         }
 

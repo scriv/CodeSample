@@ -20,6 +20,7 @@ $(function () {
 function wireEvents() {
     Microsoft.Maps.Events.addHandler(map, 'dblclick', beginAddCatch);
     Microsoft.Maps.Events.addHandler(map, 'viewchange', hideActiveInfoBox);
+    $('#NewCatch').click(addCatch);
 }
 
 // Load all catches from the API and display them
@@ -37,6 +38,7 @@ function placePins(catches) {
     map.entities.clear();
 
     var catchPins = new Microsoft.Maps.EntityCollection();
+    var catchCount = 0;
 
     // Add a push pin and associated info box for each catch
     $.each(catches, function (index, catchItem) {
@@ -62,8 +64,10 @@ function placePins(catches) {
         catchPins.push(infoBox);
 
         Microsoft.Maps.Events.addHandler(pin, 'click', toggleInfoBox);
+        catchCount++;
     });
 
+    $('#CatchCount').html(catchCount.toString());
     map.entities.push(catchPins);
 }
 
@@ -78,8 +82,6 @@ function beginAddCatch(e) {
     $('#CreateCatchForm img').attr('src', mapUrl);
 
     $('#CreateCatchForm').modal({ show: true })
-
-    $('#NewCatch').click(addCatch);
 }
 
 // Adds a catch to the system
