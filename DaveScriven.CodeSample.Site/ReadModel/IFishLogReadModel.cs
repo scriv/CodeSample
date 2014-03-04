@@ -13,6 +13,11 @@ namespace DaveScriven.CodeSample.Site.ReadModel
         IDbSet<Catch> Catches { get; }
 
         /// <summary>
+        /// Gets the application's statistics.
+        /// </summary>
+        IDbSet<Stats> Statistics { get; }
+
+        /// <summary>
         /// Saves any changes.
         /// </summary>
         int SaveChanges();

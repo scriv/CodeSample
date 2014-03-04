@@ -1,9 +1,6 @@
 ﻿using DaveScriven.CodeSample.Site.Domain.Events;
 using SimpleCqrs.Domain;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace DaveScriven.CodeSample.Site.Domain
 {
@@ -80,7 +77,7 @@ namespace DaveScriven.CodeSample.Site.Domain
         /// <summary>
         /// Likes the catch.
         /// </summary>
-        public void Like()
+        public virtual void Like()
         {
             this.Apply(new CatchLikedEvent { AggregateRootId = this.Id });
         }

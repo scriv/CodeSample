@@ -28,7 +28,7 @@ namespace DaveScriven.CodeSample.Site.Tests.Domain
                     c.Depth == command.Depth && 
                     c.Length == command.Length &&
                     c.Latitude == command.Latitude &&
-                    c.Longitude == command.Longitude)));
+                    c.Longitude == command.Longitude)), "A domain catch correctly representing the command was not saved.");
             }
         }
     }

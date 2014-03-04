@@ -179,6 +179,7 @@
     <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Domain\Catch.cs" />
     <Compile Include="Domain\Denormalizers\CatchesReadModelDenormalizer.cs" />
+    <Compile Include="Domain\Denormalizers\StatisticsDenormalizer.cs" />
     <Compile Include="Domain\Events\CatchLikedEvent.cs" />
     <Compile Include="Domain\Events\CatchLoggedEvent.cs" />
     <Compile Include="Global.asax.cs">

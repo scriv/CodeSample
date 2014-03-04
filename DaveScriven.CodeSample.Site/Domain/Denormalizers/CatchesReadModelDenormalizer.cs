@@ -25,7 +25,7 @@ namespace DaveScriven.CodeSample.Site.Domain.Denormalizers
         }
 
         /// <summary>
-        /// Handles the specified domain event.
+        /// Handles the specified <see cref="CatchLoggedEvent"/> domain event.
         /// </summary>
         /// <param name="domainEvent">The domain event.</param>
         public void Handle(CatchLoggedEvent domainEvent)
@@ -44,7 +44,7 @@ namespace DaveScriven.CodeSample.Site.Domain.Denormalizers
         }
 
         /// <summary>
-        /// Handles the specified domain event.
+        /// Handles the specified <see cref="CatchLikedEvent"/> domain event.
         /// </summary>
         /// <param name="domainEvent">The domain event.</param>
         public void Handle(CatchLikedEvent domainEvent)

@@ -51,9 +51,9 @@ function placePins(catches) {
                 showPointer: false
             });
 
+        // Get the info box content from a template
         var infoBoxHtml = $('<div></div>');
         infoBoxHtml.loadTemplate('#CatchInfoBoxTemplate', catchItem);
-
         infoBox.setHtmlContent(infoBoxHtml.html());
 
         var pin = new Microsoft.Maps.Pushpin(location, { icon: $('#CatchMap').data('pinIcon'), width: 50, height: 23, infobox: infoBox });
@@ -88,7 +88,7 @@ function addCatch(e) {
     var isValid = form.valid();
 
     if (isValid) {
-        $.post('/api/catches', form.serialize(), function (data) {
+        $.post(form.attr('action'), form.serialize(), function (data) {
             // Reload the catches, hide the modal and clear the form
             loadCatches();
             $('#CreateCatchForm').modal('hide');

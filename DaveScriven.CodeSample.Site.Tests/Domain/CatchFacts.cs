@@ -24,7 +24,7 @@ namespace DaveScriven.CodeSample.Site.Tests.Domain
                 @catch.OnCatchLiked(new CatchLikedEvent());
 
                 // Assert
-                Assert.That(@catch.Likes, Is.EqualTo(likesCount + 1));
+                Assert.That(@catch.Likes, Is.EqualTo(likesCount + 1), "The catch like count was not incremented correctly.");
             }
         }
 

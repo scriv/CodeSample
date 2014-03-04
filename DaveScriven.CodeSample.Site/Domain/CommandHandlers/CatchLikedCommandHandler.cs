@@ -1,6 +1,7 @@
 ﻿using DaveScriven.CodeSample.Site.Commands;
 using DaveScriven.CodeSample.Site.Domain;
 using SimpleCqrs.Commanding;
+using SimpleCqrs.Domain;
 
 namespace DaveScriven.CodeSample.Site.Domain.CommandHandlers
 {
