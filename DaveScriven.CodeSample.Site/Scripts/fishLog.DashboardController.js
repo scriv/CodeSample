@@ -78,6 +78,7 @@ function beginAddCatch(e) {
 
     $('#Latitude').val(location.latitude);
     $('#Longitude').val(location.longitude);
+
     var mapUrl = $('#CreateCatchForm img').data('srcTemplate').replace(/LATITUDE/g, location.latitude).replace(/LONGITUDE/g, location.longitude);
     $('#CreateCatchForm img').attr('src', mapUrl);
 

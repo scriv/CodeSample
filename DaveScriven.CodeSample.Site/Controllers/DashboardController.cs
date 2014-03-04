@@ -19,7 +19,10 @@ namespace DaveScriven.CodeSample.Site.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.TotalCatches = this.readModel.Statistics.First().TotalCatches;
+            var stats = this.readModel.Statistics.FirstOrDefault();
+            int totalCatches = stats != null ? stats.TotalCatches : 0;
+
+            ViewBag.TotalCatches = totalCatches;
 
             return View();
         }

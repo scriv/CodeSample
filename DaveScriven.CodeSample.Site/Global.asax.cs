@@ -20,6 +20,7 @@ namespace DaveScriven.CodeSample.Site
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             MappingConfig.InitialiseMappings();
+            EventStoreDatabaseInitializer.Initialize();
         }
 
         protected void Application_End()

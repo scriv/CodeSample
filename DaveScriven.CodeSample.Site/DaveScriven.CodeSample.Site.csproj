@@ -172,6 +172,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Cqrs\CqrsRuntime.cs" />
+    <Compile Include="Cqrs\EventStoreDatabaseInitializer.cs" />
     <Compile Include="Domain\CommandHandlers\CatchLikedCommandHandler.cs" />
     <Compile Include="Domain\CommandHandlers\CatchLoggedCommandHandler.cs" />
     <Compile Include="Commands\CatchLikedCommand.cs" />
