@@ -1,5 +1,5 @@
 ﻿using DaveScriven.CodeSample.Site.Cqrs;
-using DaveScriven.CodeSample.Site.ReadModel;
+using DaveScriven.CodeSample.Data;
 using SimpleInjector;
 using SimpleInjector.Integration.Web.Mvc;
 using SimpleInjector.Integration.WebApi;

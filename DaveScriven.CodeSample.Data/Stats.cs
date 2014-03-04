@@ -1,5 +1,5 @@
 ﻿
-namespace DaveScriven.CodeSample.Site.ReadModel
+namespace DaveScriven.CodeSample.Data
 {
     /// <summary>
     /// Represents the application's statistics.

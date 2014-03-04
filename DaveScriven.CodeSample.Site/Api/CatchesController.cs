@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using DaveScriven.CodeSample.Site.Commands;
-using DaveScriven.CodeSample.Site.ReadModel;
+using DaveScriven.CodeSample.Domain.Commands;
+using DaveScriven.CodeSample.Data;
 using SimpleCqrs.Commanding;
 using System;
 using System.Collections.Generic;

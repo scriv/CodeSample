@@ -1,6 +1,6 @@
 ﻿using SimpleCqrs.Commanding;
 
-namespace DaveScriven.CodeSample.Site.Commands
+namespace DaveScriven.CodeSample.Domain.Commands
 {
     /// <summary>
     /// Indicates that a new catch should be logged.

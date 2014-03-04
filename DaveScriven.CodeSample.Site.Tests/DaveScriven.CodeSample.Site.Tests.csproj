@@ -68,6 +68,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DaveScriven.CodeSample.Data\DaveScriven.CodeSample.Data.csproj">
+      <Project>{597340ed-f4b0-4bb4-aac4-2af7484bfda5}</Project>
+      <Name>DaveScriven.CodeSample.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DaveScriven.CodeSample.Domain\DaveScriven.CodeSample.Domain.csproj">
+      <Project>{60e7606e-e61c-4829-b8ab-e20b231f84f9}</Project>
+      <Name>DaveScriven.CodeSample.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DaveScriven.CodeSample.Site\DaveScriven.CodeSample.Site.csproj">
       <Project>{c5a9355b-db2b-4e36-b5d8-c208f3462bdf}</Project>
       <Name>DaveScriven.CodeSample.Site</Name>

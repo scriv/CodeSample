@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace DaveScriven.CodeSample.Site.ReadModel
+namespace DaveScriven.CodeSample.Data
 {
     /// <summary>
     /// Represents a logged catch.

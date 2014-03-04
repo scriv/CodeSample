@@ -173,24 +173,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Cqrs\CqrsRuntime.cs" />
     <Compile Include="Cqrs\EventStoreDatabaseInitializer.cs" />
-    <Compile Include="Domain\CommandHandlers\CatchLikedCommandHandler.cs" />
-    <Compile Include="Domain\CommandHandlers\CatchLoggedCommandHandler.cs" />
-    <Compile Include="Commands\CatchLikedCommand.cs" />
-    <Compile Include="Commands\CatchLoggedCommand.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
-    <Compile Include="Domain\Catch.cs" />
-    <Compile Include="Domain\Denormalizers\CatchesReadModelDenormalizer.cs" />
-    <Compile Include="Domain\Denormalizers\StatisticsDenormalizer.cs" />
-    <Compile Include="Domain\Events\CatchLikedEvent.cs" />
-    <Compile Include="Domain\Events\CatchLoggedEvent.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ReadModel\Catch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReadModel\FishLogReadModel.cs" />
-    <Compile Include="ReadModel\IFishLogReadModel.cs" />
-    <Compile Include="ReadModel\Stats.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\packages\AutoMapper.3.1.1\lib\net40\AutoMapper.Net4.dll">
@@ -237,7 +224,16 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Shared\NewCatch.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DaveScriven.CodeSample.Data\DaveScriven.CodeSample.Data.csproj">
+      <Project>{597340ed-f4b0-4bb4-aac4-2af7484bfda5}</Project>
+      <Name>DaveScriven.CodeSample.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DaveScriven.CodeSample.Domain\DaveScriven.CodeSample.Domain.csproj">
+      <Project>{60e7606e-e61c-4829-b8ab-e20b231f84f9}</Project>
+      <Name>DaveScriven.CodeSample.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

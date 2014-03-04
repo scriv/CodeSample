@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
 
-namespace DaveScriven.CodeSample.Site.ReadModel
+namespace DaveScriven.CodeSample.Data
 {
     /// <summary>
     /// Provides read-model querying and updating support.

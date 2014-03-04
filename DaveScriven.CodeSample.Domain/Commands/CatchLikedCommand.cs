@@ -1,10 +1,7 @@
 ﻿using SimpleCqrs.Commanding;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace DaveScriven.CodeSample.Site.Commands
+namespace DaveScriven.CodeSample.Domain.Commands
 {
     /// <summary>
     /// Indicates that a catch should be liked.

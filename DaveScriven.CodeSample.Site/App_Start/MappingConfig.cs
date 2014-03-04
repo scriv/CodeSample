@@ -1,9 +1,5 @@
 ﻿using AutoMapper;
-using DaveScriven.CodeSample.Site.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using DaveScriven.CodeSample.Domain.Commands;
 
 namespace DaveScriven.CodeSample.Site
 {
@@ -11,7 +7,7 @@ namespace DaveScriven.CodeSample.Site
     {
         public static void InitialiseMappings()
         {
-            Mapper.CreateMap<DaveScriven.CodeSample.Site.ReadModel.Catch, CatchLoggedCommand>();
+            Mapper.CreateMap<DaveScriven.CodeSample.Data.Catch, CatchLoggedCommand>();
         }
     }
 }

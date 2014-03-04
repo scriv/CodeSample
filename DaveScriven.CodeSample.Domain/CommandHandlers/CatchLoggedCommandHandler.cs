@@ -1,9 +1,9 @@
-﻿using DaveScriven.CodeSample.Site.Commands;
-using DaveScriven.CodeSample.Site.Domain;
+﻿using DaveScriven.CodeSample.Domain.Commands;
+using DaveScriven.CodeSample.Domain;
 using SimpleCqrs.Commanding;
 using SimpleCqrs.Domain;
 
-namespace DaveScriven.CodeSample.Site.Domain.CommandHandlers
+namespace DaveScriven.CodeSample.Domain.CommandHandlers
 {
     /// <summary>
     /// Handles <see cref="CatchLoggedCommand"/>s.

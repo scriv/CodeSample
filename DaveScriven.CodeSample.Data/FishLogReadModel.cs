@@ -2,7 +2,7 @@
 using System.Data.Entity;
 using System.Linq;
 
-namespace DaveScriven.CodeSample.Site.ReadModel
+namespace DaveScriven.CodeSample.Data
 {
     /// <summary>
     /// Represents the Fishlog read model.

@@ -1,9 +1,9 @@
-﻿using DaveScriven.CodeSample.Site.Domain.Events;
-using DaveScriven.CodeSample.Site.ReadModel;
+﻿using DaveScriven.CodeSample.Domain.Events;
+using DaveScriven.CodeSample.Data;
 using SimpleCqrs.Domain;
 using SimpleCqrs.Eventing;
 
-namespace DaveScriven.CodeSample.Site.Domain.Denormalizers
+namespace DaveScriven.CodeSample.Domain.Denormalizers
 {
     /// <summary>
     /// Handles catch related events to ensure that the catch read model is up to date.
@@ -30,7 +30,7 @@ namespace DaveScriven.CodeSample.Site.Domain.Denormalizers
         /// <param name="domainEvent">The domain event.</param>
         public void Handle(CatchLoggedEvent domainEvent)
         {
-            this.readModel.Catches.Add(new ReadModel.Catch
+            this.readModel.Catches.Add(new Data.Catch
                 {
                     CatchId = domainEvent.AggregateRootId,
                     Species = domainEvent.Species,
@@ -49,7 +49,7 @@ namespace DaveScriven.CodeSample.Site.Domain.Denormalizers
         /// <param name="domainEvent">The domain event.</param>
         public void Handle(CatchLikedEvent domainEvent)
         {
-            ReadModel.Catch @catch = this.readModel.Catches.Find(domainEvent.AggregateRootId);
+            Data.Catch @catch = this.readModel.Catches.Find(domainEvent.AggregateRootId);
 
             @catch.Likes = domainRepository.GetById<Catch>(domainEvent.AggregateRootId).Likes;
 

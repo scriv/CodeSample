@@ -1,6 +1,6 @@
-﻿using DaveScriven.CodeSample.Site.Domain.Denormalizers;
-using DaveScriven.CodeSample.Site.Domain.Events;
-using DaveScriven.CodeSample.Site.ReadModel;
+﻿using DaveScriven.CodeSample.Data;
+using DaveScriven.CodeSample.Domain.Denormalizers;
+using DaveScriven.CodeSample.Domain.Events;
 using Moq;
 using NUnit.Framework;
 using SimpleCqrs.Domain;
@@ -48,7 +48,7 @@ namespace DaveScriven.CodeSample.Site.Tests.Domain
             {
                 // Arrange
                 var catchLikedEvent = new CatchLikedEvent { AggregateRootId = Guid.NewGuid() };
-                var associatedCatch = new DaveScriven.CodeSample.Site.Domain.Catch { Likes = 10 };
+                var associatedCatch = new DaveScriven.CodeSample.Domain.Catch { Likes = 10 };
                 var catchReadModel = new Catch { CatchId = catchLikedEvent.AggregateRootId, Likes = 9 };
 
                 var readModelMock = new Mock<IFishLogReadModel>();
@@ -57,7 +57,7 @@ namespace DaveScriven.CodeSample.Site.Tests.Domain
 
                 readModelMock.Setup(m => m.Catches).Returns(dbSetMock.Object);
 
-                domainRepositoryStub.Setup(r => r.GetById<DaveScriven.CodeSample.Site.Domain.Catch>(catchLikedEvent.AggregateRootId)).Returns(associatedCatch);
+                domainRepositoryStub.Setup(r => r.GetById<DaveScriven.CodeSample.Domain.Catch>(catchLikedEvent.AggregateRootId)).Returns(associatedCatch);
                 dbSetMock.Setup(s => s.Find(catchLikedEvent.AggregateRootId)).Returns(catchReadModel);
 
                 var denormalizer = new CatchesReadModelDenormalizer(readModelMock.Object, domainRepositoryStub.Object);

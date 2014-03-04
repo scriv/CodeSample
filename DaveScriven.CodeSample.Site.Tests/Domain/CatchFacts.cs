@@ -1,5 +1,5 @@
-﻿using DaveScriven.CodeSample.Site.Domain;
-using DaveScriven.CodeSample.Site.Domain.Events;
+﻿using DaveScriven.CodeSample.Domain;
+using DaveScriven.CodeSample.Domain.Events;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;

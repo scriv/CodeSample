@@ -1,8 +1,8 @@
-﻿using DaveScriven.CodeSample.Site.Domain.Events;
+﻿using DaveScriven.CodeSample.Domain.Events;
 using SimpleCqrs.Domain;
 using System;
 
-namespace DaveScriven.CodeSample.Site.Domain
+namespace DaveScriven.CodeSample.Domain
 {
     /// <summary>
     /// Represents a fishing catch.

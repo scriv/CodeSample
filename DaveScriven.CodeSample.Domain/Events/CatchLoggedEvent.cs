@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace DaveScriven.CodeSample.Site.Domain.Events
+namespace DaveScriven.CodeSample.Domain.Events
 {
     /// <summary>
     /// Indicates that a new catch has been logged.

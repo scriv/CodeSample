@@ -1,6 +1,6 @@
-﻿using DaveScriven.CodeSample.Site.Commands;
-using DaveScriven.CodeSample.Site.Domain;
-using DaveScriven.CodeSample.Site.Domain.CommandHandlers;
+﻿using DaveScriven.CodeSample.Domain;
+using DaveScriven.CodeSample.Domain.CommandHandlers;
+using DaveScriven.CodeSample.Domain.Commands;
 using Moq;
 using NUnit.Framework;
 using SimpleCqrs;

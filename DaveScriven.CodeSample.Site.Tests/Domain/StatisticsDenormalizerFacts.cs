@@ -1,6 +1,6 @@
-﻿using DaveScriven.CodeSample.Site.Domain.Denormalizers;
-using DaveScriven.CodeSample.Site.Domain.Events;
-using DaveScriven.CodeSample.Site.ReadModel;
+﻿using DaveScriven.CodeSample.Domain.Denormalizers;
+using DaveScriven.CodeSample.Domain.Events;
+using DaveScriven.CodeSample.Data;
 using Moq;
 using NUnit.Framework;
 using System;

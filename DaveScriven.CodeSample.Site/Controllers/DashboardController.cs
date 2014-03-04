@@ -1,4 +1,4 @@
-﻿using DaveScriven.CodeSample.Site.ReadModel;
+﻿using DaveScriven.CodeSample.Data;
 using System.Linq;
 using System.Web.Mvc;
 

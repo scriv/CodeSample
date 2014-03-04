@@ -1,9 +1,9 @@
-﻿using DaveScriven.CodeSample.Site.Domain.Events;
-using DaveScriven.CodeSample.Site.ReadModel;
+﻿using DaveScriven.CodeSample.Domain.Events;
+using DaveScriven.CodeSample.Data;
 using SimpleCqrs.Eventing;
 using System.Linq;
 
-namespace DaveScriven.CodeSample.Site.Domain.Denormalizers
+namespace DaveScriven.CodeSample.Domain.Denormalizers
 {
     /// <summary>
     /// Updates the statistics read model.
